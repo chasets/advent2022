@@ -66,48 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-01T07:39:27.051936-05:00"
+						"dateAndTimeString" : "2022-12-01T08:08:11.786998-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "SPiKUySrDQCvpTvpD7CNsw=="
 				},
-				"code" : "CalorieCounting new.\r\rCalorieCountingExample new pageExample.\r\r\rCalorieCountingExample new puzzle1Example.\r\r"
-			},
-			{
-				"__type" : "pharoSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-01T06:48:00.434946-05:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-01T07:41:01.652998-05:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "GF+phySrDQCv0VaZD7CNsw=="
-				},
-				"code" : "ZnClient new get: 'https://adventofcode.com/2022/day/1/input'"
+				"code" : "CalorieCounting new."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -134,14 +100,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-01T07:18:55.589414-05:00"
+						"dateAndTimeString" : "2022-12-01T08:07:59.793087-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "/HJmpiSrDQCv9oF/D7CNsw=="
 				},
-				"code" : ""
+				"code" : "CalorieCountingExample new pageExample."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -168,14 +134,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-01T07:19:32.657318-05:00"
+						"dateAndTimeString" : "2022-12-01T08:08:16.896016-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "FjnKqiSrDQCv+IIED7CNsw=="
 				},
-				"code" : ""
+				"code" : "CalorieCountingExample new pageExample elfData."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-01T06:48:00.434946-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-01T08:07:50.991447-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "GF+phySrDQCv0VaZD7CNsw=="
+				},
+				"code" : "CalorieCountingExample new puzzle1Example."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -202,14 +202,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-01T07:28:27.525528-05:00"
+						"dateAndTimeString" : "2022-12-01T08:24:04.350216-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "RajyyCSrDQCwBB0gD7CNsw=="
 				},
-				"code" : ""
+				"code" : "#gtView gtPragmas."
 			},
 			{
 				"__type" : "textSnippet",
