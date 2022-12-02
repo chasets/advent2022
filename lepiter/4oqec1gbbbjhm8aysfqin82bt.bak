@@ -350,14 +350,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-02T10:42:08.860294-05:00"
+						"dateAndTimeString" : "2022-12-02T10:42:50.143094-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "otT81DirDQCY2MH0AW8rTw=="
 				},
-				"code" : "d at: "
+				"code" : "d at: 'paperrockxxx' ifPresent: ['hi']"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -384,14 +384,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-02T07:49:33.264954-05:00"
+						"dateAndTimeString" : "2022-12-02T16:19:38.921583-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "VHSQ1TirDQCY2ZUeAW8rTw=="
 				},
-				"code" : ""
+				"code" : "1 printPaddedWith: $0 to: 2"
 			}
 		]
 	},

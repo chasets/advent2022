@@ -100,14 +100,48 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-01T09:10:57.515567-05:00"
+						"dateAndTimeString" : "2022-12-01T09:10:59.627539-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "7XadhiarDQCYdDJEAW8rTw=="
 				},
-				"code" : "CalorieCountingExample new pageExampl"
+				"code" : "CalorieCountingExample new"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-02T16:44:23.713162-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-02T16:44:52.638351-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "vj1a+kCrDQCKI9xUDZYIkQ=="
+				},
+				"code" : "data := CalorieCountingExample new pageExampleData.\r\rcc := CalorieCounting new data: "
 			},
 			{
 				"__type" : "pharoSnippet",

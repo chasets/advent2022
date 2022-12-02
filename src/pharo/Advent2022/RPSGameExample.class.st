@@ -1,19 +1,12 @@
 Class {
 	#name : #RPSGameExample,
-	#superclass : #Object,
+	#superclass : #Advent2020Example,
 	#category : #Advent2022
 }
 
 { #category : #accessing }
-RPSGameExample >> dataDir [
-	^ self repo location / 'data' / 'day_02'
-]
-
-{ #category : #accessing }
-RPSGameExample >> getDataFor: filenameString [
-	| rawData |
-	rawData := ((self dataDir / filenameString) contents) trimBoth.
-	^ rawData lines collect: [:i | (i splitOn: '\s' asRegex)]
+RPSGameExample >> dayNum [
+	^ 2
 ]
 
 { #category : #accessing }
@@ -37,16 +30,6 @@ RPSGameExample >> pageExample2 [
 ]
 
 { #category : #accessing }
-RPSGameExample >> pageExampleData [
-	^ self getDataFor: 'data_1.txt'
-]
-
-{ #category : #accessing }
-RPSGameExample >> puzzle1Data [
-	^ self getDataFor: 'puzzle_1.txt'
-]
-
-{ #category : #accessing }
 RPSGameExample >> puzzle1Example [
 	<gtExample>
 	| data rps |
@@ -64,9 +47,4 @@ RPSGameExample >> puzzle1Example2 [
 	rps := RPSGames2 new rawGames: data; games.
 	self assert: rps totalScore = 13889.
 	^ rps
-]
-
-{ #category : #accessing }
-RPSGameExample >> repo [
-	^ IceRepository repositories detect: [:i | i name = 'advent2022']
 ]

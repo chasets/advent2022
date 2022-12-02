@@ -1,12 +1,12 @@
 Class {
 	#name : #CalorieCountingExample,
-	#superclass : #Object,
+	#superclass : #Advent2020Example,
 	#category : #Advent2022
 }
 
-{ #category : #setup }
-CalorieCountingExample >> dataDir [
-	^ self repo location / 'data' / 'day_02'
+{ #category : #accessing }
+CalorieCountingExample >> dayNum [
+	^ 1
 ]
 
 { #category : #accessing }
@@ -29,27 +29,12 @@ CalorieCountingExample >> pageExample [
 	
 ]
 
-{ #category : #setup }
-CalorieCountingExample >> pageExampleData [
-	^ self getDataFor: 'data_1.txt'
-]
-
-{ #category : #accessing }
-CalorieCountingExample >> puzzle1Data [
-	^ self getDataFor: 'puzzle_1.txt'
-]
-
 { #category : #accessing }
 CalorieCountingExample >> puzzle1Example [
 	<gtExample>
 	| cc |
 	cc := CalorieCounting new data: self puzzle1Data.
-	self assert: cc maxCalories > 0.
-	self assert: cc top3CaloriesTotal > 0.
+	self assert: cc maxCalories = 70296.
+	self assert: cc top3CaloriesTotal = 205381.
 	^ cc
-]
-
-{ #category : #setup }
-CalorieCountingExample >> repo [
-	^ IceRepository repositories detect: [:i | i name = 'advent2022']
 ]
