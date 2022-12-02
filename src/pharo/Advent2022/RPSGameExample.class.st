@@ -39,11 +39,11 @@ RPSGameExample >> puzzle1Data [
 { #category : #accessing }
 RPSGameExample >> puzzle1Example [
 	<gtExample>
-	| cc |
-	cc := CalorieCounting new data: self puzzle1Data.
-	self assert: cc maxCalories > 0.
-	self assert: cc top3CaloriesTotal > 0.
-	^ cc
+	| data rps |
+	data := self puzzle1Data.
+	rps := RPSGames new rawGames: data; games.
+	self assert: rps totalScore > 0.
+	^ rps
 ]
 
 { #category : #accessing }
