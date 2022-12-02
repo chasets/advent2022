@@ -140,14 +140,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-02T06:42:32.173421-05:00"
+						"dateAndTimeString" : "2022-12-02T07:26:32.874803-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "sWt5djirDQCYehlwAW8rTw=="
 				},
-				"code" : "RPSGame new.\r\r"
+				"code" : "RPSGame new play1: 'A'; play2: 'Y'; winner; yourself\r\r\r"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -174,14 +174,82 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-02T06:44:12.530582-05:00"
+						"dateAndTimeString" : "2022-12-02T07:50:51.939743-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "4AAlkjirDQCYhcDNAW8rTw=="
 				},
-				"code" : "RPSGameExample new pageExampleData."
+				"code" : "data := RPSGameExample new pageExampleData."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-02T07:01:17.096076-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-02T08:31:48.809027-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "otT81DirDQCY2MH0AW8rTw=="
+				},
+				"code" : "RPSGames new rawGames: data; games"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-02T07:01:26.770754-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-02T07:49:33.264954-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "VHSQ1TirDQCY2ZUeAW8rTw=="
+				},
+				"code" : ""
 			}
 		]
 	},

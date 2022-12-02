@@ -19,11 +19,11 @@ RPSGameExample >> getDataFor: filenameString [
 { #category : #accessing }
 RPSGameExample >> pageExample [
 	<gtExample>
-	| cc |
-	cc := CalorieCounting new data: self pageExampleData.
-	self assert: cc maxCalories = 24000.
-	self assert: cc top3CaloriesTotal = 45000.
-	^ cc
+	| data rps |
+	data := self pageExampleData.
+	rps := RPSGames new rawGames: data; games.
+	self assert: rps totalScore = 15.
+	^ rps
 ]
 
 { #category : #accessing }
