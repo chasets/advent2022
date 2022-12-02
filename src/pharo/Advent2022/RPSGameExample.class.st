@@ -31,7 +31,7 @@ RPSGameExample >> pageExample2 [
 	<gtExample>
 	| data rps |
 	data := self pageExampleData.
-	rps := RPSGames new rawGames: data; games.
+	rps := RPSGames2 new rawGames: data; games.
 	self assert: rps totalScore = 12.
 	^ rps
 ]
@@ -52,7 +52,7 @@ RPSGameExample >> puzzle1Example [
 	| data rps |
 	data := self puzzle1Data.
 	rps := RPSGames new rawGames: data; games.
-	self assert: rps totalScore > 0.
+	self assert: rps totalScore = 14827.
 	^ rps
 ]
 
@@ -61,8 +61,8 @@ RPSGameExample >> puzzle1Example2 [
 	<gtExample>
 	| data rps |
 	data := self puzzle1Data.
-	rps := RPSGames new rawGames: data; games.
-	self assert: rps totalScore > 0.
+	rps := RPSGames2 new rawGames: data; games.
+	self assert: rps totalScore = 13889.
 	^ rps
 ]
 
