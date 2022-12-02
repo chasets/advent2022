@@ -1,46 +1,43 @@
 Class {
-	#name : #CalorieCountingExample,
+	#name : #RPSGameExample,
 	#superclass : #Object,
 	#category : #Advent2022
 }
 
-{ #category : #setup }
-CalorieCountingExample >> dataDir [
+{ #category : #accessing }
+RPSGameExample >> dataDir [
 	^ self repo location / 'data' / 'day_02'
 ]
 
 { #category : #accessing }
-CalorieCountingExample >> getDataFor: filenameString [
+RPSGameExample >> getDataFor: filenameString [
 	| rawData |
 	rawData := ((self dataDir / filenameString) contents) trimBoth.
-	^ (rawData splitOn: '\n\n' asRegex) 
-	collect: [:i | (i splitOn: '\s' asRegex) collect: #asInteger]
+	^ rawData lines collect: [:i | (i splitOn: '\s' asRegex)]
 ]
 
-{ #category : #example }
-CalorieCountingExample >> pageExample [
+{ #category : #accessing }
+RPSGameExample >> pageExample [
 	<gtExample>
 	| cc |
 	cc := CalorieCounting new data: self pageExampleData.
 	self assert: cc maxCalories = 24000.
 	self assert: cc top3CaloriesTotal = 45000.
 	^ cc
-	
-	
 ]
 
-{ #category : #setup }
-CalorieCountingExample >> pageExampleData [
+{ #category : #accessing }
+RPSGameExample >> pageExampleData [
 	^ self getDataFor: 'data_1.txt'
 ]
 
 { #category : #accessing }
-CalorieCountingExample >> puzzle1Data [
+RPSGameExample >> puzzle1Data [
 	^ self getDataFor: 'puzzle_1.txt'
 ]
 
 { #category : #accessing }
-CalorieCountingExample >> puzzle1Example [
+RPSGameExample >> puzzle1Example [
 	<gtExample>
 	| cc |
 	cc := CalorieCounting new data: self puzzle1Data.
@@ -49,7 +46,7 @@ CalorieCountingExample >> puzzle1Example [
 	^ cc
 ]
 
-{ #category : #setup }
-CalorieCountingExample >> repo [
+{ #category : #accessing }
+RPSGameExample >> repo [
 	^ IceRepository repositories detect: [:i | i name = 'advent2022']
 ]
