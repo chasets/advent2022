@@ -3,7 +3,8 @@ Class {
 	#superclass : #Object,
 	#instVars : [
 		'play1',
-		'play2'
+		'play2',
+		'strategy'
 	],
 	#category : #Advent2022
 }
@@ -85,6 +86,11 @@ RPSGame >> pointsDict [
 { #category : #accessing }
 RPSGame >> score [
 	^ self winnerPoints + self gamePoints
+]
+
+{ #category : #setup }
+RPSGame >> strategy: anObject [ 
+	strategy := anObject
 ]
 
 { #category : #util }

@@ -27,6 +27,16 @@ RPSGameExample >> pageExample [
 ]
 
 { #category : #accessing }
+RPSGameExample >> pageExample2 [
+	<gtExample>
+	| data rps |
+	data := self pageExampleData.
+	rps := RPSGames new rawGames: data; games.
+	self assert: rps totalScore = 12.
+	^ rps
+]
+
+{ #category : #accessing }
 RPSGameExample >> pageExampleData [
 	^ self getDataFor: 'data_1.txt'
 ]
@@ -38,6 +48,16 @@ RPSGameExample >> puzzle1Data [
 
 { #category : #accessing }
 RPSGameExample >> puzzle1Example [
+	<gtExample>
+	| data rps |
+	data := self puzzle1Data.
+	rps := RPSGames new rawGames: data; games.
+	self assert: rps totalScore > 0.
+	^ rps
+]
+
+{ #category : #accessing }
+RPSGameExample >> puzzle1Example2 [
 	<gtExample>
 	| data rps |
 	data := self puzzle1Data.

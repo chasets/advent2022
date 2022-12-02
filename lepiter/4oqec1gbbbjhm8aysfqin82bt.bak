@@ -129,6 +129,148 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-02T09:20:35.026751-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-02T09:20:41.27782-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "U7soxzqrDQCGj/y9DyUUow=="
+				},
+				"code" : "RPSGame new play1: 'A'; play2: 'Y'; winner; yourself.\r\rdata := RPSGameExample new pageExampleData.\r\rRPSGames new rawGames: data; games\r"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-02T09:20:49.078956-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-02T09:22:09.007987-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Ab/OxzqrDQCGkOAPDyUUow=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "For Puzzle 2, the change is that X, Y, and Z are no longer play2 moves, but are indicators of the goal: X = lose, Y = draw, Z = win."
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-02T09:22:10.75295-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-02T09:22:16.390761-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "tNnTzDqrDQCGkQoADyUUow=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "So, I'm thinking a subclass. "
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-02T09:20:27.520155-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-02T09:46:42.748633-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "rzC2xjqrDQCGjpRjDyUUow=="
+				},
+				"code" : "data := RPSGameExample new pageExampleData.\r\rRPSGames2 new rawGames: data; games"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
 						"dateAndTimeString" : "2022-12-02T06:34:51.425693-05:00"
 					}
 				},
@@ -140,14 +282,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-02T07:26:32.874803-05:00"
+						"dateAndTimeString" : "2022-12-02T10:22:45.860093-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "sWt5djirDQCYehlwAW8rTw=="
 				},
-				"code" : "RPSGame new play1: 'A'; play2: 'Y'; winner; yourself\r\r\r"
+				"code" : "({'paper' . 'rock'} sorted ) joinUsing: ''"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -174,14 +316,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-02T07:50:51.939743-05:00"
+						"dateAndTimeString" : "2022-12-02T10:25:52.335285-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "4AAlkjirDQCYhcDNAW8rTw=="
 				},
-				"code" : "data := RPSGameExample new pageExampleData."
+				"code" : "d := Dictionary new.\r\td at: 'paperrock' put: 'paper'.\r\td at: 'rockscissors' put: 'rock'.\r\td at: 'paperscissors' put: 'scissors'."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -208,14 +350,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-02T08:28:54.955606-05:00"
+						"dateAndTimeString" : "2022-12-02T10:42:08.860294-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "otT81DirDQCY2MH0AW8rTw=="
 				},
-				"code" : "RPSGames new rawGames: data"
+				"code" : "d at: "
 			},
 			{
 				"__type" : "pharoSnippet",
