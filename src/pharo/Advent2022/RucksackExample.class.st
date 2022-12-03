@@ -16,6 +16,7 @@ RucksackExample >> pageExample [
 	data := self pageExampleData.
 	rs := Rucksacks new rawData: data.
 	self assert: rs totalPriorityScore = 157.
+	self assert: rs totalBadgeScore = 70.
 	^ rs
 ]
 
@@ -26,6 +27,7 @@ RucksackExample >> puzzel1Example [
 	data := self puzzle1Data.
 	rs := Rucksacks new rawData: data.
 	self assert: rs totalPriorityScore = 7742.
+	self assert: rs totalBadgeScore = 2276.
 	^ rs
 ]
 

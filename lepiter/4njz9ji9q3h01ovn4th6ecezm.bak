@@ -103,14 +103,150 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T07:35:59.688658-05:00"
+						"dateAndTimeString" : "2022-12-03T07:36:19.094604-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "jvKmbk2rDQCfs08aDe626A=="
 				},
-				"code" : "AdvenOb"
+				"code" : "AdventObject new.\rAdventEntity new.\rAdventGroup new."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T10:28:33.946398-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T12:06:50.812675-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Vnsf2E+rDQC/ZF5MA2BDqQ=="
+				},
+				"code" : "data := RucksackExample new pageExampleData.\rrs := Rucksacks new rawData: data."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T10:45:15.104512-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T12:15:03.856804-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "FfHLE1CrDQC/aXtmA2BDqQ=="
+				},
+				"code" : "col := (rs split: rs items by: 3) first"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T10:52:55.430907-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T12:13:14.706849-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Dvc7L1CrDQC/bhNbA2BDqQ=="
+				},
+				"code" : "x := (col first first) name.\ry := (col first second) name.\rz := (col first third) name.\r\r(x select: [:i | y includes: i]) select: [:i | z includes: i]"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T11:23:22.06123-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T12:19:36.418273-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "yCEcnFCrDQC/h75ZA2BDqQ=="
+				},
+				"code" : "col inject: col first name into: [:prev :cur | prev select: [:i | cur name includes: i]]"
 			}
 		]
 	},
