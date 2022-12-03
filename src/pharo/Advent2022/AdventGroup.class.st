@@ -15,7 +15,7 @@ AdventGroup >> gtItemsFor: aView [
 	^ aView list 
 		title: 'Items';
 		priority: 10;
-		items: [self items sorted]
+		items: [self items]
 ]
 
 { #category : #accessing }

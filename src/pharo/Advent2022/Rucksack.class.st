@@ -9,7 +9,7 @@ Rucksack >> commonItems [
 	| first second |
 	first := self compartments first.
 	second := self compartments second.
-	^ (first select: [:i | second includes: i]) asOrderedCollection
+	^ (first select: [:i | second includes: i]) asSet
 ]
 
 { #category : #accessing }
@@ -27,7 +27,7 @@ Rucksack >> metrics [
 	aDict := OrderedDictionary new.
 	aDict at: 'Compartments' put: (self compartments joinUsing: ' - ').
 	aDict at: 'Priority Score' put: self priorityScore.
-	aDict at: 'Common Items' put: (self commonItems joinUsing: '').
+	aDict at: 'Common Items' put: (self commonItems asOrderedCollection joinUsing: '').
 	^ aDict
 ]
 
@@ -39,6 +39,11 @@ Rucksack >> name [
 { #category : #accessing }
 Rucksack >> priorityScore [
 	^ (self commonItems collect: [:i | self scoreItem: i]) sum
+]
+
+{ #category : #accessing }
+Rucksack >> rawData: anObject [
+	rawData := {#contents -> anObject} asDictionary
 ]
 
 { #category : #accessing }

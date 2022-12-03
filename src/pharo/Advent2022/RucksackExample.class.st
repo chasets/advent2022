@@ -15,7 +15,7 @@ RucksackExample >> pageExample [
 	| data rs |
 	data := self pageExampleData.
 	rs := Rucksacks new rawData: data.
-	"self assert: rs totalPriorityScore = 157."
+	self assert: rs totalPriorityScore = 157.
 	^ rs
 ]
 
@@ -27,7 +27,7 @@ RucksackExample >> puzzel1Example [
 RucksackExample >> singleExample [
 	<gtExample>
 	| data r |
-	data := {#contents -> 'vJrwpWtwJgWrhcsFMMfFFhFp'} asDictionary.
+	data := 'vJrwpWtwJgWrhcsFMMfFFhFp'.
 	r := Rucksack new rawData: data.
 	self assert: r priorityScore = 16.
 	^ r
