@@ -21,6 +21,12 @@ RucksackExample >> pageExample [
 
 { #category : #accessing }
 RucksackExample >> puzzel1Example [
+	<gtExample>
+	| data rs |
+	data := self puzzle1Data.
+	rs := Rucksacks new rawData: data.
+	self assert: rs totalPriorityScore = 7742.
+	^ rs
 ]
 
 { #category : #accessing }
