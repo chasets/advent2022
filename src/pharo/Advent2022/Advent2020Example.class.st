@@ -19,9 +19,10 @@ Advent2020Example >> dayNum [
 
 { #category : #accessing }
 Advent2020Example >> getDataFor: filenameString [
+	"parse by line. If you need something fancier, override in subclass"
 	| rawData |
 	rawData := ((self dataDir / filenameString) contents) trimBoth.
-	^ rawData lines collect: [:i | (i splitOn: '\s' asRegex)]
+	^ rawData lines 
 ]
 
 { #category : #accessing }

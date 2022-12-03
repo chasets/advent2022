@@ -22,6 +22,16 @@ Rucksack >> compartments [
 ]
 
 { #category : #accessing }
+Rucksack >> metrics [
+	| aDict |
+	aDict := OrderedDictionary new.
+	aDict at: 'Compartments' put: (self compartments joinUsing: ' - ').
+	aDict at: 'Priority Score' put: self priorityScore.
+	aDict at: 'Common Items' put: (self commonItems joinUsing: '').
+	^ aDict
+]
+
+{ #category : #accessing }
 Rucksack >> name [
 	^ rawData at: #contents
 ]

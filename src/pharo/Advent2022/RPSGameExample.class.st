@@ -10,6 +10,13 @@ RPSGameExample >> dayNum [
 ]
 
 { #category : #accessing }
+RPSGameExample >> getDataFor: filenameString [
+	| rawData |
+	rawData := ((self dataDir / filenameString) contents) trimBoth.
+	^ rawData lines collect: [:i | (i splitOn: '\s' asRegex)]
+]
+
+{ #category : #accessing }
 RPSGameExample >> pageExample [
 	<gtExample>
 	| data rps |
