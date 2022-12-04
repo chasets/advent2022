@@ -12,6 +12,20 @@ CleaningAssignment >> assignments [
 ]
 
 { #category : #accessing }
+CleaningAssignment >> assignmentsString [
+	^ (self assignments collect: [:i | i joinUsing: ',']) joinUsing: ' : '
+]
+
+{ #category : #accessing }
+CleaningAssignment >> fullyContained [
+	| overlap first second |
+	overlap := self overlappingAssignments.
+	first := self assignments first.
+	second := self assignments second.
+	^ overlap = first or: [overlap = second ]
+]
+
+{ #category : #accessing }
 CleaningAssignment >> hasOverlaps [
 	^ self overlappingAssignments size > 0
 ]
@@ -20,7 +34,7 @@ CleaningAssignment >> hasOverlaps [
 CleaningAssignment >> metrics [
 	| aDict |
 	aDict := OrderedDictionary new.
-	aDict at: 'Assignments' put: (self assignments joinUsing: ' - ').
+	aDict at: 'Assignments' put: (self assignmentsString ).
 	aDict at: 'Overlapping Assignments' put: (self overlappingAssignments).
 	aDict at: 'Has Overlaps' put: (self hasOverlaps).
 	^ aDict
@@ -28,7 +42,7 @@ CleaningAssignment >> metrics [
 
 { #category : #accessing }
 CleaningAssignment >> name [
-	^ self assignments
+	^ self overlappingAssignments size asString, ' overlaps - fullyContained: ', self fullyContained asString
 ]
 
 { #category : #accessing }

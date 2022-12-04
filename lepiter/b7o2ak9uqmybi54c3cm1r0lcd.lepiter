@@ -137,14 +137,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-04T07:22:49.82303-05:00"
+						"dateAndTimeString" : "2022-12-04T07:25:09.589227-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "3Z5ohmCrDQCJ3y+lBLhmvQ=="
 				},
-				"code" : "data := CleaningAssignmentExample new pageExampleData. \rrs := Rucksacks new rawData: data."
+				"code" : "data := CleaningAssignmentExample new pageExampleData. \rrs := CleaningAssignments new rawData: data."
 			}
 		]
 	},

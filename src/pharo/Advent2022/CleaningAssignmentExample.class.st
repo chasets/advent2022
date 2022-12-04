@@ -14,7 +14,8 @@ CleaningAssignmentExample >> pageExample [
 	<gtExample>
 	| cas |
 	cas := CleaningAssignments new rawData: self pageExampleData.
-	"self assert: cas overlapCount = 2."
+	self assert: cas overlapCount = 4.
+	self assert: cas fullyContainedCount = 2.
 	^ cas
 ]
 
@@ -23,7 +24,8 @@ CleaningAssignmentExample >> puzzle1Example [
 	<gtExample>
 	| cas |
 	cas := CleaningAssignments new rawData: self puzzle1Data.
-	"self assert: cc top3CaloriesTotal = 205381."
+	self assert: cas overlapCount = 801.
+	self assert: cas fullyContainedCount = 444.
 	^ cas
 ]
 
