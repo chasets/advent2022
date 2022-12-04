@@ -171,14 +171,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T12:15:03.856804-05:00"
+						"dateAndTimeString" : "2022-12-03T12:49:26.796266-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "FfHLE1CrDQC/aXtmA2BDqQ=="
 				},
-				"code" : "col := (rs split: rs items by: 3) first"
+				"code" : ""
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -205,14 +205,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T12:13:14.706849-05:00"
+						"dateAndTimeString" : "2022-12-03T14:24:59.064204-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Dvc7L1CrDQC/bhNbA2BDqQ=="
 				},
-				"code" : "x := (col first first) name.\ry := (col first second) name.\rz := (col first third) name.\r\r(x select: [:i | y includes: i]) select: [:i | z includes: i]"
+				"code" : "Metacello new\n    baseline: 'GraphQL';\n    repository: 'github://OBJECTSEMANTICS/GraphQL';\r    onConflictUseLoaded;\n    load."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -239,14 +239,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T12:19:36.418273-05:00"
+						"dateAndTimeString" : "2022-12-03T12:49:20.015269-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "yCEcnFCrDQC/h75ZA2BDqQ=="
 				},
-				"code" : "col inject: col first name into: [:prev :cur | prev select: [:i | cur name includes: i]]"
+				"code" : ""
 			}
 		]
 	},

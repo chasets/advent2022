@@ -3,7 +3,215 @@
 	"__type" : "page",
 	"children" : {
 		"__type" : "snippets",
-		"items" : [ ]
+		"items" : [
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T14:54:18.628064-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T14:54:19.408425-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "x6TMJ1OrDQCJvAKQAcZAVw=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "See https://github.com/OBJECTSEMANTICS/GraphQL"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T14:25:50.434198-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T14:25:52.94133-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "swuvKFOrDQCJvWQ3AcZAVw=="
+				},
+				"code" : "Metacello new\n    baseline: 'GraphQL';\n    repository: 'github://OBJECTSEMANTICS/GraphQL';\r    onConflictUseLoaded;\n    load."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T14:25:57.092254-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T14:50:23.136748-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "s6MUKVOrDQCJvnlvAcZAVw=="
+				},
+				"code" : "GraphQLBetaDemoSite demoStop.\rGraphQLBetaDemoSite demoStart"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T14:31:51.637037-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T14:31:53.937457-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "PpA2PlOrDQCJynzeAcZAVw=="
+				},
+				"code" : "Object subclass: #Hero\n\tinstanceVariableNames: 'name planet'"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T14:32:01.037158-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T14:45:22.115413-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "e//FPlOrDQCJzn9AAcZAVw=="
+				},
+				"code" : "Query new heroes .\r\rQuery schema \n    "
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T14:52:00.325217-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-03T15:00:19.786322-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "dq5BhlOrDQCJ1L39AcZAVw=="
+				},
+				"code" : "\"Subclass GraphQLBetaDemoSite with configure pointing to our new Query class\"\rGraphQLDemo2 demoStop.\rGraphQLDemo2  demoStart."
+			}
+		]
 	},
 	"createEmail" : {
 		"__type" : "email",
@@ -24,12 +232,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-12-01T06:30:12.265241-05:00"
+			"dateAndTimeString" : "2022-12-03T14:25:47.74615-05:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Setup"
+		"title" : "Setup / GraphQl"
 	},
 	"uid" : {
 		"__type" : "uuid",

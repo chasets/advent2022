@@ -1,7 +1,7 @@
 Class {
 	#name : #RucksackExample,
 	#superclass : #Advent2020Example,
-	#category : #Advent2022
+	#category : #'Advent2022-Example'
 }
 
 { #category : #accessing }

@@ -18,7 +18,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-02T16:52:41.075693-05:00"
+						"dateAndTimeString" : "2022-12-03T14:54:18.628064-05:00"
 					}
 				},
 				"editEmail" : {
@@ -29,54 +29,17 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-02T16:52:42.679042-05:00"
+						"dateAndTimeString" : "2022-12-03T14:54:19.408425-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "MJsdF0GrDQCaAgHIDeedTg=="
+					"uidString" : "x6TMJ1OrDQCJvAKQAcZAVw=="
 				},
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "https://adventofcode.com/2022/day/3"
-			},
-			{
-				"__type" : "textSnippet",
-				"children" : {
-					"__type" : "snippets",
-					"items" : [ ]
-				},
-				"createEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"createTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T07:35:13.296566-05:00"
-					}
-				},
-				"editEmail" : {
-					"__type" : "email",
-					"emailString" : "<unknown>"
-				},
-				"editTime" : {
-					"__type" : "time",
-					"time" : {
-						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T07:35:49.537119-05:00"
-					}
-				},
-				"uid" : {
-					"__type" : "uid",
-					"uidString" : "bl8dGEGrDQCaA/mKDeedTg=="
-				},
-				"paragraphStyle" : {
-					"__type" : "textStyle"
-				},
-				"string" : "I guess it is time to steal the Object -> Entity / Group hierarching from the Github example. It is so handy. "
+				"string" : "See https://github.com/OBJECTSEMANTICS/GraphQL"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -92,7 +55,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T07:35:54.491948-05:00"
+						"dateAndTimeString" : "2022-12-03T14:25:50.434198-05:00"
 					}
 				},
 				"editEmail" : {
@@ -103,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T07:36:19.094604-05:00"
+						"dateAndTimeString" : "2022-12-03T14:25:52.94133-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "jvKmbk2rDQCfs08aDe626A=="
+					"uidString" : "swuvKFOrDQCJvWQ3AcZAVw=="
 				},
-				"code" : "AdventObject new.\rAdventEntity new.\rAdventGroup new."
+				"code" : "Metacello new\n    baseline: 'GraphQL';\n    repository: 'github://OBJECTSEMANTICS/GraphQL';\r    onConflictUseLoaded;\n    load."
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -126,7 +89,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T10:28:33.946398-05:00"
+						"dateAndTimeString" : "2022-12-03T14:25:57.092254-05:00"
 					}
 				},
 				"editEmail" : {
@@ -137,14 +100,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T12:06:50.812675-05:00"
+						"dateAndTimeString" : "2022-12-03T14:50:23.136748-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Vnsf2E+rDQC/ZF5MA2BDqQ=="
+					"uidString" : "s6MUKVOrDQCJvnlvAcZAVw=="
 				},
-				"code" : "data := RucksackExample new pageExampleData.\rrs := Rucksacks new rawData: data."
+				"code" : "GraphQLBetaDemoSite demoStop.\rGraphQLBetaDemoSite demoStart"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -160,7 +123,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T10:45:15.104512-05:00"
+						"dateAndTimeString" : "2022-12-03T14:31:51.637037-05:00"
 					}
 				},
 				"editEmail" : {
@@ -171,14 +134,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T12:49:26.796266-05:00"
+						"dateAndTimeString" : "2022-12-03T14:31:53.937457-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "FfHLE1CrDQC/aXtmA2BDqQ=="
+					"uidString" : "PpA2PlOrDQCJynzeAcZAVw=="
 				},
-				"code" : ""
+				"code" : "Object subclass: #Hero\n\tinstanceVariableNames: 'name planet'"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -194,7 +157,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T10:52:55.430907-05:00"
+						"dateAndTimeString" : "2022-12-03T14:32:01.037158-05:00"
 					}
 				},
 				"editEmail" : {
@@ -205,14 +168,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T14:25:30.256348-05:00"
+						"dateAndTimeString" : "2022-12-03T14:45:22.115413-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "Dvc7L1CrDQC/bhNbA2BDqQ=="
+					"uidString" : "e//FPlOrDQCJzn9AAcZAVw=="
 				},
-				"code" : ""
+				"code" : "Query new heroes .\r\rQuery schema \n    "
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -228,7 +191,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T11:23:22.06123-05:00"
+						"dateAndTimeString" : "2022-12-03T14:52:00.325217-05:00"
 					}
 				},
 				"editEmail" : {
@@ -239,14 +202,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-03T12:49:20.015269-05:00"
+						"dateAndTimeString" : "2022-12-03T14:54:34.783509-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
-					"uidString" : "yCEcnFCrDQC/h75ZA2BDqQ=="
+					"uidString" : "dq5BhlOrDQCJ1L39AcZAVw=="
 				},
-				"code" : ""
+				"code" : "\"Subclass GraphQLBetaDemoSite with configure pointing to our new Query class\"\rGraphQLDemo2  demoStart."
 			}
 		]
 	},
@@ -258,7 +221,7 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-12-02T16:52:26.226135-05:00"
+			"dateAndTimeString" : "2022-12-01T06:30:03.891842-05:00"
 		}
 	},
 	"editEmail" : {
@@ -269,15 +232,15 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2022-12-02T16:52:32.835971-05:00"
+			"dateAndTimeString" : "2022-12-03T14:25:47.74615-05:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Day 3"
+		"title" : "Setup / GraphQl"
 	},
 	"uid" : {
 		"__type" : "uuid",
-		"uuid" : "e2cc1c17-41ab-0d00-9a01-948e0de79d4e"
+		"uuid" : "749f7e47-24ab-0d00-afa1-9c0d0fb08db3"
 	}
 }
