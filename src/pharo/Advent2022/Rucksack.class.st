@@ -42,11 +42,6 @@ Rucksack >> priorityScore [
 ]
 
 { #category : #accessing }
-Rucksack >> rawData: anObject [
-	rawData := {#contents -> anObject} asDictionary
-]
-
-{ #category : #accessing }
 Rucksack >> scoreDict [
 	| d |
 	d := Dictionary new.

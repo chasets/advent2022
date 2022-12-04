@@ -42,3 +42,8 @@ AdventEntity >> name [
 AdventEntity >> printOn: aStream [
 	aStream nextPutAll: self name.
 ]
+
+{ #category : #accessing }
+AdventEntity >> rawData: anObject [
+	rawData := {#contents -> anObject} asDictionary
+]
