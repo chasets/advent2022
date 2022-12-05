@@ -1,6 +1,9 @@
 Class {
 	#name : #CrateStacks,
 	#superclass : #AdventGroup,
+	#instVars : [
+		'stacks'
+	],
 	#category : #'Advent2022-Day 05'
 }
 
@@ -19,6 +22,14 @@ CrateStacks >> makeStack: anInteger fromLines: listOfStrings [
 	(rawStack reject: [:item | item = Character space]) 			
 	reverse do: [:item | stack push: item].
 	^ stack
+]
+
+{ #category : #accessing }
+CrateStacks >> moveFrom: sourceStack to: targetStack [
+	| item |
+	item := (self stacks at: sourceStack) pop.
+	(self stacks at: targetStack) push: item.
+	
 ]
 
 { #category : #accessing }
@@ -42,8 +53,18 @@ CrateStacks >> stackElement: anInteger forLine: aString [
 ]
 
 { #category : #accessing }
-CrateStacks >> stacks [
+CrateStacks >> stackTops [
+	^ (self stacks collect: #first) joinUsing: ''
+]
 
+{ #category : #accessing }
+CrateStacks >> stacks [
+	stacks ifNil: [stacks := self stacksFromData].
+	^ stacks
+]
+
+{ #category : #accessing }
+CrateStacks >> stacksFromData [
 	| rawStackLines stackLines stackNames maxStack rawStacks |
 	rawStackLines := self rawData first lines.
 	stackLines := rawStackLines allButLast.
@@ -59,15 +80,4 @@ CrateStacks >> stacks [
 		(rs reject: [:item | item = Character space])
 		reverseDo: [:item | stack push: item].
 		stack]
-
-"stackLines collect: [:line | self stackElement: i forLine: line]].
-
-	^ rawStacks collect: [:rs | 
-		| stack |
-		stack := Stack new. 
-		(rs reject: [:item | item = Character space])
-		reverseDo: [:item | stack push: item].
-		stack"
-
-
 ]

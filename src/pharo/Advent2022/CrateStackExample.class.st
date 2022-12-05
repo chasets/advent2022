@@ -20,6 +20,22 @@ CrateStackExample >> getDataFor: filenameString [
 ]
 
 { #category : #accessing }
+CrateStackExample >> moveItemExample [
+	<gtExample>
+	| data css data1Stack data2Stack actual1 actual2 |
+	data := self pageExampleData.
+	css := CrateStacks new rawData: data.
+	data1Stack := Stack new push: $Z; push: $N; push: $D; yourself.
+	data2Stack := Stack new push: $M; push: $C; yourself.
+	actual1 := css stacks at: 1.
+	actual2 := css stacks at: 2.
+	css moveFrom: 2 to: 1.
+	self assert: actual1 = data1Stack.
+	self assert: actual2 = data2Stack.
+	^ css
+]
+
+{ #category : #accessing }
 CrateStackExample >> pageExample [
 	<gtExample>
 	| data css |
