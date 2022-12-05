@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'rawData'
 	],
-	#category : #Advent2022
+	#category : #'Advent2022-Core'
 }
 
 { #category : #accessing }

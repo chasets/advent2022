@@ -6,7 +6,7 @@ Class {
 	#instVars : [
 		'items'
 	],
-	#category : #Advent2022
+	#category : #'Advent2022-Core'
 }
 
 { #category : #accessing }

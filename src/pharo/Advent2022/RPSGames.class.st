@@ -5,7 +5,7 @@ Class {
 		'rawGames',
 		'games'
 	],
-	#category : #Advent2022
+	#category : #'Advent2022-Day 02'
 }
 
 { #category : #accessing }

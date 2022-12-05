@@ -1,7 +1,7 @@
 Class {
 	#name : #CleaningAssignments,
 	#superclass : #AdventGroup,
-	#category : #Advent2022
+	#category : #'Advent2022-Day 04'
 }
 
 { #category : #accessing }

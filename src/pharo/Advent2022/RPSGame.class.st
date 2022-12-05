@@ -6,7 +6,7 @@ Class {
 		'play2',
 		'strategy'
 	],
-	#category : #Advent2022
+	#category : #'Advent2022-Day 02'
 }
 
 { #category : #setup }

@@ -5,7 +5,7 @@ Class {
 		'data',
 		'elfData'
 	],
-	#category : #Advent2022
+	#category : #'Advent2022-Day 01'
 }
 
 { #category : #accessing }

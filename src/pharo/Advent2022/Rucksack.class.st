@@ -1,7 +1,7 @@
 Class {
 	#name : #Rucksack,
 	#superclass : #AdventEntity,
-	#category : #Advent2022
+	#category : #'Advent2022-Day 03'
 }
 
 { #category : #accessing }

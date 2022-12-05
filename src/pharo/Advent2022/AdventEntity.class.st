@@ -1,7 +1,7 @@
 Class {
 	#name : #AdventEntity,
 	#superclass : #AdventObject,
-	#category : #Advent2022
+	#category : #'Advent2022-Core'
 }
 
 { #category : #accessing }

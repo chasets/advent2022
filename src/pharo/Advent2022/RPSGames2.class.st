@@ -1,7 +1,7 @@
 Class {
 	#name : #RPSGames2,
 	#superclass : #RPSGames,
-	#category : #Advent2022
+	#category : #'Advent2022-Day 02'
 }
 
 { #category : #accessing }
