@@ -145,6 +145,40 @@
 					"uidString" : "3Z5ohmCrDQCJ3y+lBLhmvQ=="
 				},
 				"code" : "data := CleaningAssignmentExample new pageExampleData. \rrs := CleaningAssignments new rawData: data."
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-05T09:17:47.541188-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-05T09:20:31.703539-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "4DqzFnerDQCewoMrCTaySA=="
+				},
+				"code" : "stack := Stack new.\r#('a' 'b' 'c') asOrderedCollection reverse do: [:i | stack push: i].\rstack"
 			}
 		]
 	},

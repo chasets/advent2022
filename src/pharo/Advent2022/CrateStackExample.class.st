@@ -38,3 +38,28 @@ CrateStackExample >> puzzle1Example [
 	"self assert: rps totalScore = 14827."
 	^ css
 ]
+
+{ #category : #accessing }
+CrateStackExample >> stackParserExample1 [
+	<gtExample>
+	| data css |
+	data := '[Z] [M] [P] [X] [Y]'.
+	css := CrateStacks new.
+	self assert: (css stackElement: 1 forLine: data) = $Z.
+	self assert: (css stackElement: 5 forLine: data) = $Y.
+	^ css
+]
+
+{ #category : #accessing }
+CrateStackExample >> stackParserExample2 [
+	<gtExample>
+	| data css |
+	data := '    [D]    
+[N] [C]    
+[Z] [M] [P]
+ 1   2   3 '.
+ ^ data
+"	css := CrateStacks new.
+	^ css"
+
+]

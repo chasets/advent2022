@@ -25,10 +25,21 @@ CrateStacks >> moves [
 ]
 
 { #category : #accessing }
+CrateStacks >> stackElement: anInteger forLine: aString [
+	^ aString at: (  (anInteger - 1) * 4 + 2 )  
+]
+
+{ #category : #accessing }
 CrateStacks >> stacks [
-	| rawStacks |
+	| rawStacks rawCollection stacks |
 	rawStacks := self rawData first.
-	^ rawStacks lines allButLast 
+	rawCollection := rawStacks lines allButLast 
 		collect: [:line | 
-			(line splitOn: '] [') collect: [:i | ((i trim) removePrefix: '[') removeSuffix: ']']]
+			(line splitOn: '] [') collect: [:i | ((i trim) removePrefix: '[') removeSuffix: ']']].
+			
+	^ rawCollection collect: [:element |
+		| stack |
+		stack := Stack new.
+		element reverse do: [:i | stack push: i].
+		stack]
 ]
