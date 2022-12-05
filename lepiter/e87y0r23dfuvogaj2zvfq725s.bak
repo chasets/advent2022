@@ -134,14 +134,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2022-12-05T15:13:50.364148-05:00"
+						"dateAndTimeString" : "2022-12-05T16:35:10.682934-05:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "2M7qB3yrDQCM8IU6Af34eQ=="
 				},
-				"code" : "item := (css stacks at: 2) pop.\r(css stacks at: 1) push: item.\rcss stacks"
+				"code" : "a := #('a' 'b' 'c') asOrderedCollection .\ra addAll: #('d' 'e')"
 			}
 		]
 	},

@@ -2,10 +2,16 @@ Class {
 	#name : #CrateStacks,
 	#superclass : #AdventGroup,
 	#instVars : [
-		'stacks'
+		'stacks',
+		'stacksList'
 	],
 	#category : #'Advent2022-Day 05'
 }
+
+{ #category : #accessing }
+CrateStacks >> initialize [
+	stacksList := OrderedCollection new.
+]
 
 { #category : #accessing }
 CrateStacks >> items [
@@ -25,6 +31,24 @@ CrateStacks >> makeStack: anInteger fromLines: listOfStrings [
 ]
 
 { #category : #accessing }
+CrateStacks >> metrics [
+	| aDict |
+	aDict := OrderedDictionary new.
+	aDict at: 'Stack Tops' put: (self stackTops ).
+	^ aDict
+]
+
+{ #category : #accessing }
+CrateStacks >> moveAll [
+	self moves do: [:moveDict | self movesFromDict: moveDict]
+]
+
+{ #category : #accessing }
+CrateStacks >> moveAll2 [
+	self moves do: [:moveDict | self movesFromDict2: moveDict]
+]
+
+{ #category : #accessing }
 CrateStacks >> moveFrom: sourceStack to: targetStack [
 	| item |
 	item := (self stacks at: sourceStack) pop.
@@ -41,10 +65,33 @@ CrateStacks >> moves [
 		| d lineColl|
 		d := Dictionary new.
 		lineColl := line splitOn: '\s' asRegex.
-		d at: #moveNumber put: lineColl second.
-		d at: #sourceStack put: lineColl fourth.
-		d at: #targetStack put: lineColl sixth.
+		d at: #moveNumber put: lineColl second asInteger.
+		d at: #sourceStack put: lineColl fourth asInteger.
+		d at: #targetStack put: lineColl sixth asInteger.
 		d]
+]
+
+{ #category : #accessing }
+CrateStacks >> movesFromDict2: moveDict [ 
+	| count source target targetStack |
+	"keep track of the stack changes"
+	stacksList add: self stacks.
+	count := moveDict at: #moveNumber.
+	source := moveDict at: #sourceStack.
+	target := moveDict at: #targetStack.
+	targetStack := self stacks at: target.
+	items := (self stacks at: source) first: count.
+	items reverse do: [:i | targetStack push: i]
+	
+]
+
+{ #category : #accessing }
+CrateStacks >> movesFromDict: moveDict [ 
+	| count source target |
+	count := moveDict at: #moveNumber.
+	source := moveDict at: #sourceStack.
+	target := moveDict at: #targetStack.
+	1 to: count  do: [:i | self moveFrom: source to: target]
 ]
 
 { #category : #accessing }

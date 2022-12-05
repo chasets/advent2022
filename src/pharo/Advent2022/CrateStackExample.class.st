@@ -41,7 +41,19 @@ CrateStackExample >> pageExample [
 	| data css |
 	data := self pageExampleData.
 	css := CrateStacks new rawData: data.
-	"self assert: rps totalScore = 15."
+	css moveAll.
+	self assert: css stackTops = 'CMZ'.
+	^ css
+]
+
+{ #category : #accessing }
+CrateStackExample >> pageExample2 [
+	<gtExample>
+	| data css |
+	data := self pageExampleData.
+	css := CrateStacks new rawData: data.
+	css moveAll2.
+	self assert: css stackTops = 'MCD'.
 	^ css
 ]
 
@@ -51,8 +63,27 @@ CrateStackExample >> puzzle1Example [
 	| data css |
 	data := self puzzle1Data.
 	css := CrateStacks new rawData: data.
-	"self assert: rps totalScore = 14827."
+	css moveAll.
+	"self assert: css stackTops = 'CMZ'."
 	^ css
+]
+
+{ #category : #accessing }
+CrateStackExample >> stackMove2a [
+	<gtExample>
+	| css data1Stack data2Stack actual1 result1Stack moveDict data |
+ 	data1Stack := Stack new push: $Z; push: $N; yourself.
+ 	data2Stack := Stack new push: $M; push: $C; push: $D; yourself.
+ 	result1Stack := Stack new push: $Z; push: $N; push: $D; yourself.
+ 	
+ 	data := self pageExampleData.
+	 css := CrateStacks new rawData: data.
+ 	moveDict := {#moveNumber -> 1. #sourceStack -> 2. #targetStack -> 1} asDictionary.
+ 	css movesFromDict2: moveDict.
+ 	actual1 := css stacks at: (moveDict at: #targetStack).
+	 self assert: actual1 = result1Stack.
+	 ^ css
+
 ]
 
 { #category : #accessing }
