@@ -6,7 +6,8 @@ Class {
 
 { #category : #accessing }
 CrateStacks >> items [
-	^ rawData
+	items ifNil: [items := self stacks collect: [:each | CrateStack new rawData: each]].
+	^ items
 ]
 
 { #category : #accessing }

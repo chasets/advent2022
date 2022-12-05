@@ -6,5 +6,10 @@ Class {
 
 { #category : #accessing }
 CrateStack >> name [
-	^ 'aStack'
+	^ self stack asString
+]
+
+{ #category : #accessing }
+CrateStack >> stack [
+	^ rawData at: #contents
 ]
