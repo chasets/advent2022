@@ -64,7 +64,18 @@ CrateStackExample >> puzzle1Example [
 	data := self puzzle1Data.
 	css := CrateStacks new rawData: data.
 	css moveAll.
-	"self assert: css stackTops = 'CMZ'."
+	self assert: css stackTops = 'SPFMVDTZT'.
+	^ css
+]
+
+{ #category : #accessing }
+CrateStackExample >> puzzle1Example2 [
+	<gtExample>
+	| data css |
+	data := self puzzle1Data.
+	css := CrateStacks new rawData: data.
+	css moveAll2.
+	self assert: css stackTops = 'ZFSJBPRFP'.
 	^ css
 ]
 

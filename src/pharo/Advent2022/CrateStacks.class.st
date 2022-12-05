@@ -73,15 +73,18 @@ CrateStacks >> moves [
 
 { #category : #accessing }
 CrateStacks >> movesFromDict2: moveDict [ 
-	| count source target targetStack |
+	| count source target targetStack sourceList sourceStack |
 	"keep track of the stack changes"
-	stacksList add: self stacks.
+	stacksList add: self stacks deepCopy.
 	count := moveDict at: #moveNumber.
 	source := moveDict at: #sourceStack.
 	target := moveDict at: #targetStack.
+	sourceStack := self stacks at: source.
 	targetStack := self stacks at: target.
-	items := (self stacks at: source) first: count.
-	items reverse do: [:i | targetStack push: i]
+	sourceList := (self stacks at: source) asOrderedCollection.
+	items := sourceList removeFirst: count.
+	items reverse do: [:i | targetStack push: i].
+	1 to: count do: [:i | sourceStack pop]
 	
 ]
 
