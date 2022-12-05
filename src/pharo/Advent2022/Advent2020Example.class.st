@@ -21,7 +21,7 @@ Advent2020Example >> dayNum [
 Advent2020Example >> getDataFor: filenameString [
 	"parse by line. If you need something fancier, override in subclass"
 	| rawData |
-	rawData := ((self dataDir / filenameString) contents) trimBoth.
+	rawData := ((self dataDir / filenameString) contents).
 	^ rawData lines 
 ]
 

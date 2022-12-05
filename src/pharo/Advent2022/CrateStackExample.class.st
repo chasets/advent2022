@@ -12,7 +12,7 @@ CrateStackExample >> dayNum [
 { #category : #accessing }
 CrateStackExample >> getDataFor: filenameString [
 	| rawData chunks stacks moves |
-	rawData := ((self dataDir / filenameString) contents) trimBoth.
+	rawData := ((self dataDir / filenameString) contents).
 	chunks := rawData splitOn: '\n\n' asRegex.
 	stacks := chunks first.
 	moves := chunks second.
@@ -53,13 +53,19 @@ CrateStackExample >> stackParserExample1 [
 { #category : #accessing }
 CrateStackExample >> stackParserExample2 [
 	<gtExample>
-	| data css |
+	| data css data1Stack data2Stack actual1 actual2 |
 	data := '    [D]    
 [N] [C]    
 [Z] [M] [P]
  1   2   3 '.
- ^ data
-"	css := CrateStacks new.
-	^ css"
+ 	data1Stack := Stack new push: $Z; push: $N; yourself.
+ 	data2Stack := Stack new push: $M; push: $C; push: $D; yourself.
+ 	
+ 	css := CrateStacks new.
+ 	actual1 := css makeStack: 1 fromLines: data lines allButLast.
+ 	actual2 := css makeStack: 2 fromLines: data lines allButLast.
+	 self assert: actual1 = data1Stack.
+	 self assert: actual2 = data2Stack.
+	 ^ css
 
 ]

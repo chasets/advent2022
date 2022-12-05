@@ -10,6 +10,17 @@ CrateStacks >> items [
 ]
 
 { #category : #accessing }
+CrateStacks >> makeStack: anInteger fromLines: listOfStrings [
+	| stackLines rawStack stack |
+	stackLines := listOfStrings. 
+	rawStack := stackLines collect: [:line | self stackElement: anInteger forLine: line].
+	stack := Stack new. 
+	(rawStack reject: [:item | item = Character space]) 			
+	reverse do: [:item | stack push: item].
+	^ stack
+]
+
+{ #category : #accessing }
 CrateStacks >> moves [
 	| rawMoves |
 	rawMoves := self rawData second.
@@ -31,15 +42,31 @@ CrateStacks >> stackElement: anInteger forLine: aString [
 
 { #category : #accessing }
 CrateStacks >> stacks [
-	| rawStacks rawCollection stacks |
-	rawStacks := self rawData first.
-	rawCollection := rawStacks lines allButLast 
-		collect: [:line | 
-			(line splitOn: '] [') collect: [:i | ((i trim) removePrefix: '[') removeSuffix: ']']].
-			
-	^ rawCollection collect: [:element |
+
+	| rawStackLines stackLines stackNames maxStack rawStacks |
+	rawStackLines := self rawData first lines.
+	stackLines := rawStackLines allButLast.
+	stackNames := rawStackLines last.
+	maxStack := stackNames trim last asString asInteger.
+
+	rawStacks := (1 to: maxStack) collect: [:i | 
+		self makeStack: i fromLines: stackLines].
+
+	^ rawStacks collect: [:rs | 
 		| stack |
-		stack := Stack new.
-		element reverse do: [:i | stack push: i].
+		stack := Stack new. 
+		(rs reject: [:item | item = Character space])
+		reverseDo: [:item | stack push: item].
 		stack]
+
+"stackLines collect: [:line | self stackElement: i forLine: line]].
+
+	^ rawStacks collect: [:rs | 
+		| stack |
+		stack := Stack new. 
+		(rs reject: [:item | item = Character space])
+		reverseDo: [:item | stack push: item].
+		stack"
+
+
 ]
