@@ -1,6 +1,10 @@
 Class {
 	#name : #CrateStack,
 	#superclass : #AdventEntity,
+	#instVars : [
+		'stack',
+		'moves'
+	],
 	#category : #'Advent2022-Day 05'
 }
 
@@ -11,5 +15,5 @@ CrateStack >> name [
 
 { #category : #accessing }
 CrateStack >> stack [
-	^ rawData at: #contents
+	^ self rawData at: #contents
 ]
