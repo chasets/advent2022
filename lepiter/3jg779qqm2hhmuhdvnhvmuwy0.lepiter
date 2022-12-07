@@ -142,6 +142,74 @@
 					"uidString" : "sbpoGp6rDQC6ViDlAq/MOw=="
 				},
 				"code" : "data := ElfFileSystemExample new pageExampleData. \refs := ElfFileSystem new rawData: data.\r\r"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-07T08:48:10.246366-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-07T08:51:21.158759-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "8pxy6J6rDQCAlcyCALF1MA=="
+				},
+				"code" : "d := Dictionary new.\rd at: 'a' put: (Dictionary new at: 'b' put: (Dictionary new at: 'c' put: 'd'; yourself); yourself).\rd"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-07T08:51:34.087925-05:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2022-12-07T08:56:20.386459-05:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "Df2Y9J6rDQCAlojUALF1MA=="
+				},
+				"code" : "keys := #('a' 'b' 'c') asOrderedCollection.\r\rcurrent := d.\r\rkeys do: [:k | current := current at: k].\r\rcurrent"
 			}
 		]
 	},

@@ -5,6 +5,11 @@ Class {
 }
 
 { #category : #accessing }
+ElfDirectory >> addDir: aElfDirectory [
+	items add: aElfDirectory
+]
+
+{ #category : #accessing }
 ElfDirectory >> addFile: aElfFile [
 	items add: aElfFile
 ]

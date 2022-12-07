@@ -24,6 +24,17 @@ ElfFileSystemExample >> dirExample1 [
 ]
 
 { #category : #accessing }
+ElfFileSystemExample >> dirExample3 [
+	<gtExample>
+	| data ed |
+	data := '/'.
+	ed := ElfDirectory new rawData: data.
+	ed addFile: self dirExample1.
+"	self assert: ed totalFileSize = 24933642."
+	^ ed
+]
+
+{ #category : #accessing }
 ElfFileSystemExample >> fileExample1 [
 	<gtExample>
 	| data ef |
@@ -46,11 +57,11 @@ ElfFileSystemExample >> fileExample2 [
 ]
 
 { #category : #accessing }
-ElfFileSystemExample >> fileSustemExample1 [
+ElfFileSystemExample >> fileSystemExample1 [
 	<gtExample>
-	| data es |
-	data := #('mjqjpqmgbljsphdztnvjfqwrcgsmlb').
-	es := ElfSignal new rawData: data.
-	self assert: es signalStart = 7.
-	^ es
+	| efs |
+	efs := ElfFileSystem new.
+	efs addDir: self dirExample1 at: '/'.
+	"self assert: es signalStart = 7."
+	^ efs
 ]
