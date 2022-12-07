@@ -1,7 +1,7 @@
 Class {
 	#name : #ElfSignal,
 	#superclass : #AdventEntity,
-	#category : #Advent2022
+	#category : #'Advent2022-Day 06'
 }
 
 { #category : #accessing }
