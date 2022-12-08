@@ -14,9 +14,11 @@ ElfFileSystem >> cd [
 	"cd is going to change currentDir"
 	| cpl |
 	cpl := self currentParsedLine. 
-	(cpl at: 3) = '/' ifTrue: [^ items add: (ElfDirectory new rawData: 'dir /')].
-	(cpl at: 3) = '..' ifTrue: [^ self currentDir: (self currentDir parent)].
+	(cpl at: 3) = '/' ifTrue: [items add: (ElfDirectory new rawData: 'dir /'). 
+							   self currentDir: (items at: 1). ^ self incr].
+	(cpl at: 3) = '..' ifTrue: [self currentDir: (self currentDir parent). ^ self incr].
 	self currentDir: (self getDirNamed: (cpl at: 3)).
+	self incr
 ]
 
 { #category : #accessing }
@@ -36,7 +38,8 @@ ElfFileSystem >> currentLineNum [
 
 { #category : #accessing }
 ElfFileSystem >> currentLineNum: anInteger [
-	currentLineNum := anInteger
+	currentLineNum := anInteger.
+	anInteger >= self rawData size ifTrue: [finished := true].
 ]
 
 { #category : #accessing }
@@ -70,6 +73,11 @@ ElfFileSystem >> getDirNamed: aString [
 ]
 
 { #category : #accessing }
+ElfFileSystem >> incr [
+	self currentLineNum: (self currentLineNum + 1)
+]
+
+{ #category : #accessing }
 ElfFileSystem >> initialize [
 "	| data |"
 	items := OrderedCollection new.
@@ -94,11 +102,19 @@ ElfFileSystem >> items [
 ElfFileSystem >> ls [
 	| lines nextCommandLineNumber |
 	nextCommandLineNumber := self findNextCommandLine.
-	lines := self rawData copyFrom: (self currentLineNum) to: nextCommandLineNumber - 1.
+	lines := self rawData copyFrom: (self currentLineNum + 1) to: nextCommandLineNumber - 1.
 	lines do: [:line | ((line splitOn: ' ') at: 1) = 'dir'
-		ifTrue: [items add: (ElfDirectory new rawData: line)].
-		items add: (ElfFile new rawData: line)].
+		ifTrue: [self currentDir addDir: (ElfDirectory new rawData: line)]
+		ifFalse: [self currentDir addFile: (ElfFile new rawData: line)]].
 	self currentLineNum: nextCommandLineNumber.
+]
+
+{ #category : #accessing }
+ElfFileSystem >> metrics [
+	| aDict |
+	aDict := OrderedDictionary new.
+	aDict at: 'Total File Size' put: (self totalFileSize ).
+	^ aDict
 ]
 
 { #category : #accessing }
@@ -111,11 +127,14 @@ ElfFileSystem >> parse [
 
 { #category : #accessing }
 ElfFileSystem >> processCurrentLine [
-	| parsedLine n |
-	n := self currentLineNum.
-	n = self rawData size ifTrue: [finished := true].
+	| parsedLine |
+	self currentLineNum >= self rawData size ifTrue: [finished := true].
 	parsedLine := self currentParsedLine.
 	(parsedLine at: 1) = '$' ifFalse: [self error: 'Current line does not begin with dollar sign'].
 	self perform: (parsedLine at: 2) asSymbol.
-	self currentLineNum: n + 1
+]
+
+{ #category : #accessing }
+ElfFileSystem >> totalFileSize [
+	^ (items collect: #totalFileSize) sum
 ]
