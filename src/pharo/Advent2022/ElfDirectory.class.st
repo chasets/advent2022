@@ -29,6 +29,11 @@ ElfDirectory >> addFileFromString: aString [
 ]
 
 { #category : #accessing }
+ElfDirectory >> collectSmallTotal: aDir [
+	^ (aDir items select: #isDir)  collect: [:d | d collectSmallTotal: d items]
+]
+
+{ #category : #accessing }
 ElfDirectory >> data [
 	^ self rawData splitOn: ' '
 ]
@@ -65,6 +70,11 @@ ElfDirectory >> isFile [
 ]
 
 { #category : #accessing }
+ElfDirectory >> isSmall [
+	^ self totalFileSize < 100000
+]
+
+{ #category : #accessing }
 ElfDirectory >> items [
 	^ items
 ]
@@ -74,6 +84,7 @@ ElfDirectory >> metrics [
 	| aDict |
 	aDict := OrderedDictionary new.
 	aDict at: 'Total File Size' put: (self totalFileSize ).
+	aDict at: 'Small File Size' put: (self smallTotal ).
 	^ aDict
 ]
 
@@ -88,6 +99,11 @@ ElfDirectory >> parent [
 ]
 
 { #category : #accessing }
+ElfDirectory >> parent: aElfDirectory [
+	parent := aElfDirectory
+]
+
+{ #category : #accessing }
 ElfDirectory >> printOn: aStream [
 	| itemCount |
 	itemCount := self rawData isEmptyOrNil 
@@ -97,6 +113,12 @@ ElfDirectory >> printOn: aStream [
 	aStream nextPut: $(.
 	aStream nextPutAll: itemCount asString.
 	aStream nextPut: $)
+]
+
+{ #category : #accessing }
+ElfDirectory >> smallTotal [
+	self isSmall ifTrue: [^ self totalFileSize].
+	^ 0
 ]
 
 { #category : #accessing }

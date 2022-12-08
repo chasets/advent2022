@@ -71,3 +71,62 @@ dir d' lines.
 	"self assert: es signalStart = 7."
 	^ efs
 ]
+
+{ #category : #accessing }
+ElfFileSystemExample >> fileSystemExample2 [
+	<gtExample>
+	| efs data |
+	data := '$ cd /
+$ ls
+dir a
+14848514 b.txt
+8504156 c.dat
+dir d
+$ cd a
+$ ls
+dir e
+29116 f
+2557 g
+62596 h.lst' lines.
+	efs := ElfFileSystem new rawData: data; parse.
+	"efs addDir: self dirExample1 at: '/'."
+	"self assert: es signalStart = 7."
+	^ efs
+]
+
+{ #category : #accessing }
+ElfFileSystemExample >> fileSystemExample3 [
+	<gtExample>
+	| efs data |
+	data := '$ cd /
+$ ls
+dir a
+14848514 b.txt
+8504156 c.dat
+dir d
+$ cd a
+$ ls
+dir e
+29116 f
+2557 g
+62596 h.lst
+$ cd e
+$ ls
+584 i
+$ cd ..
+$ cd ..' lines.
+	efs := ElfFileSystem new rawData: data; parse.
+	"efs addDir: self dirExample1 at: '/'."
+	"self assert: es signalStart = 7."
+	^ efs
+]
+
+{ #category : #accessing }
+ElfFileSystemExample >> pageExample [
+	<gtExample>
+	| data efs |
+	data := self pageExampleData.
+	efs := ElfFileSystem new rawData: data; parse.
+	"self assert: efs smallTotal = 95437."
+	^ efs
+]

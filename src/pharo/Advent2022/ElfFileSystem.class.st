@@ -90,7 +90,7 @@ ElfFileSystem >> initialize [
 
 { #category : #accessing }
 ElfFileSystem >> isCommand: aLine [
-	^ (aLine splitOn: ' ' )= '$'
+	^ (aLine splitOn: ' ' ) first = '$'
 ]
 
 { #category : #accessing }
@@ -104,7 +104,7 @@ ElfFileSystem >> ls [
 	nextCommandLineNumber := self findNextCommandLine.
 	lines := self rawData copyFrom: (self currentLineNum + 1) to: nextCommandLineNumber - 1.
 	lines do: [:line | ((line splitOn: ' ') at: 1) = 'dir'
-		ifTrue: [self currentDir addDir: (ElfDirectory new rawData: line)]
+		ifTrue: [self currentDir addDir: (ElfDirectory new rawData: line; parent: (self currentDir))]
 		ifFalse: [self currentDir addFile: (ElfFile new rawData: line)]].
 	self currentLineNum: nextCommandLineNumber.
 ]
@@ -114,6 +114,7 @@ ElfFileSystem >> metrics [
 	| aDict |
 	aDict := OrderedDictionary new.
 	aDict at: 'Total File Size' put: (self totalFileSize ).
+	aDict at: 'Total SmallTotal' put: (self smallTotal ).
 	^ aDict
 ]
 
@@ -132,6 +133,14 @@ ElfFileSystem >> processCurrentLine [
 	parsedLine := self currentParsedLine.
 	(parsedLine at: 1) = '$' ifFalse: [self error: 'Current line does not begin with dollar sign'].
 	self perform: (parsedLine at: 2) asSymbol.
+]
+
+{ #category : #accessing }
+ElfFileSystem >> smallTotal [
+	| allSmallTotals itemsToCheck |
+	itemsToCheck := self items.
+	allSmallTotals := itemsToCheck deep: [:x | x isDir ifTrue: [x items]] collect: [:x | x isDir ifTrue: [x smallTotal] ].
+	^ (allSmallTotals reject: #isNil) sum
 ]
 
 { #category : #accessing }
