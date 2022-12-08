@@ -10,19 +10,29 @@ ElfFile >> data [
 ]
 
 { #category : #accessing }
+ElfFile >> fileSize [
+	^ self data first asNumber
+]
+
+{ #category : #accessing }
+ElfFile >> isDir [
+	^false
+]
+
+{ #category : #accessing }
+ElfFile >> isFile [
+	^ true
+]
+
+{ #category : #accessing }
 ElfFile >> metrics [
 	| aDict |
 	aDict := OrderedDictionary new.
-	aDict at: 'File Size' put: (self size ).
+	aDict at: 'File Size' put: (self fileSize ).
 	^ aDict
 ]
 
 { #category : #accessing }
 ElfFile >> name [
 	^ self data second
-]
-
-{ #category : #accessing }
-ElfFile >> size [
-	^ self data first asNumber
 ]
